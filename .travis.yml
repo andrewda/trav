@@ -1,0 +1,14 @@
+language: python
+
+python: 3.6
+
+dist: trusty
+
+cache:
+  pip: true
+
+install:
+  - pip install . --upgrade
+
+script:
+  - make test

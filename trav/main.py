@@ -1,0 +1,61 @@
+import os
+
+def var_is_true(var):
+    if os.environ.get(var) and os.environ.get(var).lower() == 'true':
+        return True
+    else:
+        return False
+
+class Travis(object):
+    CI = var_is_true('CI')
+    TRAVIS = var_is_true('TRAVIS')
+    CONTINUOUS_INTEGRATION = var_is_true('CONTINUOUS_INTEGRATION')
+    DEBIAN_FRONTEND = os.environ.get('DEBIAN_FRONTEND')
+    HAS_JOSH_K_SEAL_OF_APPROVAL = var_is_true('HAS_JOSH_K_SEAL_OF_APPROVAL')
+    USER = os.environ.get('USER')
+    HOME = os.environ.get('HOME')
+    LANG = os.environ.get('LANG')
+    LC_ALL = os.environ.get('LC_ALL')
+    RAILS_ENV = os.environ.get('RAILS_ENV')
+    RACK_ENV = os.environ.get('RACK_ENV')
+    MERB_ENV = os.environ.get('MERB_ENV')
+
+    ALLOW_FAILURE = var_is_true('TRAVIS_ALLOW_FAILURE')
+    BRANCH = os.environ.get('TRAVIS_BRANCH')
+    BUILD_DIR = os.environ.get('TRAVIS_BUILD_DIR')
+    BUILD_NUMBER = os.environ.get('TRAVIS_BUILD_NUMBER')
+    COMMIT = os.environ.get('TRAVIS_COMMIT')
+    COMMIT_MESSAGE = os.environ.get('TRAVIS_COMMIT_MESSAGE')
+    COMMIT_RANGE = os.environ.get('TRAVIS_COMMIT_RANGE')
+    EVENT_TYPE = os.environ.get('TRAVIS_EVENT_TYPE')
+    JOB_ID = os.environ.get('TRAVIS_JOB_ID')
+    JOB_NUMBER = os.environ.get('TRAVIS_JOB_NUMBER')
+    OS_NAME = os.environ.get('TRAVIS_OS_NAME')
+    PULL_REQUEST = os.environ.get('TRAVIS_PULL_REQUEST')
+    PULL_REQUEST_BRANCH = os.environ.get('TRAVIS_PULL_REQUEST_BRANCH')
+    PULL_REQUEST_SHA = os.environ.get('TRAVIS_PULL_REQUEST_SHA')
+    PULL_REQUEST_SLUG = os.environ.get('TRAVIS_PULL_REQUEST_SLUG')
+    SECURE_ENV_VARS = var_is_true('TRAVIS_SECURE_ENV_VARS')
+    SUDO = var_is_true('TRAVIS_SUDO')
+    TEST_RESULT = os.environ.get('TRAVIS_TEST_RESULT')
+    TAG = os.environ.get('TRAVIS_TAG')
+
+    DART_VERSION = os.environ.get('TRAVIS_DART_VERSION')
+    GO_VERSION = os.environ.get('TRAVIS_GO_VERSION')
+    HAXE_VERSION = os.environ.get('TRAVIS_HAXE_VERSION')
+    JDK_VERSION = os.environ.get('TRAVIS_JDK_VERSION')
+    JULIA_VERSION = os.environ.get('TRAVIS_JULIA_VERSION')
+    NODE_VERSION = os.environ.get('TRAVIS_NODE_VERSION')
+    OTP_RELEASE = os.environ.get('TRAVIS_OTP_RELEASE')
+    PERL_VERSION = os.environ.get('TRAVIS_PERL_VERSION')
+    PHP_VERSION = os.environ.get('TRAVIS_PHP_VERSION')
+    PYTHON_VERSION = os.environ.get('TRAVIS_PYTHON_VERSION')
+    R_VERSION = os.environ.get('TRAVIS_R_VERSION')
+    RUBY_VERSION = os.environ.get('TRAVIS_RUBY_VERSION')
+    RUST_VERSION = os.environ.get('TRAVIS_RUST_VERSION')
+    SCALA_VERSION = os.environ.get('TRAVIS_SCALA_VERSION')
+    MARIADB_VERSION = os.environ.get('TRAVIS_MARIADB_VERSION')
+    XCODE_SDK = os.environ.get('TRAVIS_XCODE_SDK')
+    XCODE_SCHEME = os.environ.get('TRAVIS_XCODE_SCHEME')
+    XCODE_PROJECT = os.environ.get('TRAVIS_XCODE_PROJECT')
+    XCODE_WORKSPACE = os.environ.get('TRAVIS_XCODE_WORKSPACE')
