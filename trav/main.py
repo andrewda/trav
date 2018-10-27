@@ -26,6 +26,7 @@ class Travis(object):
     BUILD_ID = os.environ.get('TRAVIS_BUILD_ID')
     BUILD_NUMBER = os.environ.get('TRAVIS_BUILD_NUMBER')
     BUILD_STAGE_NAME = os.environ.get('TRAVIS_BUILD_STAGE_NAME')
+    BUILD_WEB_URL = os.environ.get('TRAVIS_BUILD_WEB_URL')
     COMMIT = os.environ.get('TRAVIS_COMMIT')
     COMMIT_MESSAGE = os.environ.get('TRAVIS_COMMIT_MESSAGE')
     COMMIT_RANGE = os.environ.get('TRAVIS_COMMIT_RANGE')
