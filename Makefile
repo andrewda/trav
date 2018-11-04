@@ -5,4 +5,5 @@ publish:
 	rm -fr build dist .egg trav.egg-info
 
 test:
-	python tests/test.py
+	python -m pytest
+	python -m tests.vars
