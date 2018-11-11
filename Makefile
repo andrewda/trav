@@ -6,4 +6,3 @@ publish:
 
 test:
 	python -m pytest
-	python -m tests.vars
